@@ -1,0 +1,6 @@
+0.7
+2020.2
+Jun 10 2026
+19:45:28
+/home/fftacc/FFT-Hardware/FFT-Processor-Design/src/multiplier.v,1770007403,verilog,,/home/fftacc/FFT-Hardware/FFT-Processor-Design/src/twiddle_rom.v,,fp4_cmul;fp4_mul;fp8_cmul;fp8_mul,,,,,,,,
+/home/fftacc/FFT-Hardware/FFT-Processor-Design/src/twiddle_rom.v,1770010144,verilog,,,,twiddle_factor_unified,,,,,,,,
