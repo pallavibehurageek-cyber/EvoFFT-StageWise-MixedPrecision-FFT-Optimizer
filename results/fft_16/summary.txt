@@ -1,0 +1,46 @@
+Mixed-Precision FFT Optimization Results
+============================================================
+
+FFT Size     : 16
+Population   : 6
+Generations  : 3
+Objectives   : 3
+
+Pareto Front Solutions: 6
+
+ID    Power(W)     Area(LUTs)   Perf Error     SQNR(dB)    
+-------------------------------------------------------
+0     0.132000     2            1.176765       41.49       
+1     0.124000     3            8.679963       4.76        
+2     0.127000     2            3.562256       13.04       
+3     0.117000     2            21.261274      1.35        
+4     0.120000     2            10.715807      3.67        
+5     0.118000     2            10.310506      3.85        
+
+
+Best Solutions by Objective:
+--------------------------------------------------
+
+Best Power:
+  Solution ID : 3
+  Power       : 0.117000 W
+  Area        : 2 LUTs
+  Perf Error  : 21.261274
+  SQNR        : 1.35 dB
+  Chromosome  : [0, 0, 0, 0, 0, 0, 0, 0]
+
+Best Area:
+  Solution ID : 2
+  Power       : 0.127000 W
+  Area        : 2 LUTs
+  Perf Error  : 3.562256
+  SQNR        : 13.04 dB
+  Chromosome  : [0, 1, 0, 1, 0, 1, 0, 1]
+
+Best Performance:
+  Solution ID : 0
+  Power       : 0.132000 W
+  Area        : 2 LUTs
+  Perf Error  : 1.176765
+  SQNR        : 41.49 dB
+  Chromosome  : [1, 1, 1, 1, 1, 1, 1, 1]
