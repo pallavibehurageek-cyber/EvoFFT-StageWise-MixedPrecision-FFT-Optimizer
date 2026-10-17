@@ -128,3 +128,9 @@ The generated FFT cores are suitable for:
 - Energy-constrained embedded platforms
 
 ---
+## 8. Dataset and Source Code
+
+- Dataset: (https://drive.google.com/file/d/1KKnKym6N2ex7eo9OPoh858diExDy4AIM/view?usp=drive_link)
+- Repository: GitHub Link (https://github.com/pallavibehurageek-cyber/EvoFFT-StageWise-MixedPrecision-FFT-Optimizer)
+
+---
