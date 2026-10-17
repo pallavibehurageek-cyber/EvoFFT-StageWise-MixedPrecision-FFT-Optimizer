@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Mar 26 16:32:15 2026
+# Process ID: 94686
+# Current directory: /home/fftacc/FFT-Hardware/FFT-Processor-Design
+# Command line: vivado -mode batch -source ./vivado_synthesis.tcl -tclargs fft_16_sol2_gen3 ./reports/fft_16_sol2_gen3_metrics.csv 10.0 /home/fftacc/FFT-Hardware/FFT-Processor-Design/generated_designs/fft_16_sol2_gen3.v /home/fftacc/FFT-Hardware/FFT-Processor-Design/generated_designs/fft_16_sol2_gen3_top.v /home/fftacc/FFT-Hardware/FFT-Processor-Design/verilog_sources
+# Log file: /home/fftacc/FFT-Hardware/FFT-Processor-Design/vivado.log
+# Journal file: /home/fftacc/FFT-Hardware/FFT-Processor-Design/vivado.jou
+#-----------------------------------------------------------
+source ./vivado_synthesis.tcl
