@@ -1,0 +1,21 @@
+
+*** Running vivado
+    with args -log fp4_cmul.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fp4_cmul.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Aug  5 17:27:35 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source fp4_cmul.tcl -notrace
+create_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 637.773 ; gain = 220.219
+Command: synth_design -top fp4_cmul -part xc7a35tcpg236-1
+0 Infos, 0 Warnings, 0 Critical Warnings and 1 Errors encountered.
+synth_design failed
+ERROR: [Common 17-1293] The path 'C:/FFT-Processor-Design/Vivado_Workspace/My_FFT_Hardware.cache/wt' already exists, is a directory, but is not writable.
+INFO: [Common 17-206] Exiting Vivado at Thu Aug  5 17:27:51 2026...
