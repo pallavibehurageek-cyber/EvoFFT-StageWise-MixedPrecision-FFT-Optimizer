@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Aug  5 17:27:35 2026
+# Process ID         : 36524
+# Current directory  : C:/FFT-Processor-Design/Vivado_Workspace/My_FFT_Hardware.runs/synth_1
+# Command line       : vivado.exe -log fp4_cmul.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fp4_cmul.tcl
+# Log file           : C:/FFT-Processor-Design/Vivado_Workspace/My_FFT_Hardware.runs/synth_1/fp4_cmul.vds
+# Journal file       : C:/FFT-Processor-Design/Vivado_Workspace/My_FFT_Hardware.runs/synth_1\vivado.jou
+# Running On         : Pallavilearns
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 7 7745HX with Radeon Graphics        
+# CPU Frequency      : 3593 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16308 MB
+# Swap memory        : 22548 MB
+# Total Virtual      : 38857 MB
+# Available Virtual  : 16879 MB
+#-----------------------------------------------------------
+source fp4_cmul.tcl -notrace
