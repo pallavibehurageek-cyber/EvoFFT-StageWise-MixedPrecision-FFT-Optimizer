@@ -1,0 +1,40 @@
+name: Import Vivado 28395 artifacts
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/import-vivado-28395.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out EvoFFT
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Copy full Vivado artifact directory
+        run: |
+          set -euo pipefail
+          git config user.name "Pallavi Behura"
+          git config user.email "pallavibehurageek@gmail.com"
+          git clone --quiet https://github.com/RohanCoderiiitb/FFT-Processor-Design.git "$RUNNER_TEMP/source"
+          source_base="$RUNNER_TEMP/source/.Xil/Vivado-28395-iiitb-OptiPlex-7080"
+          target_base="Vivado-28395-brecw-OptiPlex-7080"
+          test -d "$source_base"
+          mkdir -p "$target_base"
+          cp -a "$source_base/." "$target_base/"
+          # Ensure the requested u and realtime sections are present.
+          test -d "$target_base/incrSyn/716540354/u"
+          test -d "$target_base/realtime"
+          test -d "$target_base/wt"
+          # This one-shot workflow removes itself from the committed tree.
+          rm -f .github/workflows/import-vivado-28395.yml
+          git add -A -- "$target_base" .github/workflows/import-vivado-28395.yml
+          git commit -m "Switched back to SQNR"
+          git push origin HEAD:main
