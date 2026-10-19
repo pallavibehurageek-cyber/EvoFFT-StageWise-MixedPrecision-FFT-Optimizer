@@ -1,0 +1,8 @@
+Metric,Value
+design_name,fft_32_sol15_gen258
+top_module,fft_32_sol15_gen258_top
+lut_count,3058
+total_power_w,0.106
+wns_ns,46.126
+critical_path_delay_ns,53.867
+clock_period_ns,100.0

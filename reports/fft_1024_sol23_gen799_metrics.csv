@@ -1,0 +1,8 @@
+Metric,Value
+design_name,fft_1024_sol23_gen799
+top_module,fft_1024_sol23_gen799_top
+lut_count,2488
+total_power_w,0.105
+wns_ns,54.826
+critical_path_delay_ns,45.167
+clock_period_ns,100.0

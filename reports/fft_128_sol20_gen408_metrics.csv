@@ -1,0 +1,8 @@
+Metric,Value
+design_name,fft_128_sol20_gen408
+top_module,fft_128_sol20_gen408_top
+lut_count,3091
+total_power_w,0.105
+wns_ns,44.964
+critical_path_delay_ns,55.029
+clock_period_ns,100.0

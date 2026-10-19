@@ -1,0 +1,8 @@
+Metric,Value
+design_name,fft_32_sol12_gen245
+top_module,fft_32_sol12_gen245_top
+lut_count,3021
+total_power_w,0.105
+wns_ns,46.210
+critical_path_delay_ns,53.783
+clock_period_ns,100.0

@@ -1,0 +1,8 @@
+Metric,Value
+design_name,fft_128_sol18_gen429
+top_module,fft_128_sol18_gen429_top
+lut_count,2619
+total_power_w,0.106
+wns_ns,53.132
+critical_path_delay_ns,46.861
+clock_period_ns,100.0

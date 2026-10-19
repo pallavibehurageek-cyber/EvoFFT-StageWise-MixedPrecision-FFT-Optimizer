@@ -1,0 +1,8 @@
+Metric,Value
+design_name,fft_128_sol7_gen415
+top_module,fft_128_sol7_gen415_top
+lut_count,2713
+total_power_w,0.106
+wns_ns,47.657
+critical_path_delay_ns,52.336
+clock_period_ns,100.0

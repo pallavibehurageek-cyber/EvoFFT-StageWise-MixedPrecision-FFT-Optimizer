@@ -1,0 +1,8 @@
+Metric,Value
+design_name,fft_32_sol20_gen294
+top_module,fft_32_sol20_gen294_top
+lut_count,2941
+total_power_w,0.106
+wns_ns,46.240
+critical_path_delay_ns,53.753
+clock_period_ns,100.0

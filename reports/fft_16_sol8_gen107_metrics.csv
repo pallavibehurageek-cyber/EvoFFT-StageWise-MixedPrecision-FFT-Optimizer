@@ -1,0 +1,8 @@
+Metric,Value
+design_name,fft_16_sol8_gen107
+top_module,fft_16_sol8_gen107_top
+lut_count,2853
+total_power_w,0.106
+wns_ns,58.722
+critical_path_delay_ns,41.271
+clock_period_ns,100.0

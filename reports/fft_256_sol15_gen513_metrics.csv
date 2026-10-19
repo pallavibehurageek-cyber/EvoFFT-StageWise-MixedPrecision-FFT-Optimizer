@@ -1,0 +1,8 @@
+Metric,Value
+design_name,fft_256_sol15_gen513
+top_module,fft_256_sol15_gen513_top
+lut_count,2728
+total_power_w,0.106
+wns_ns,48.348
+critical_path_delay_ns,51.645
+clock_period_ns,100.0

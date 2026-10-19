@@ -1,0 +1,8 @@
+Metric,Value
+design_name,fft_16_sol18_gen110
+top_module,fft_16_sol18_gen110_top
+lut_count,2845
+total_power_w,0.106
+wns_ns,58.879
+critical_path_delay_ns,41.114
+clock_period_ns,100.0

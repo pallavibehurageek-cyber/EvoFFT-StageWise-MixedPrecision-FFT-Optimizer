@@ -1,0 +1,8 @@
+Metric,Value
+design_name,fft_256_sol12_gen512
+top_module,fft_256_sol12_gen512_top
+lut_count,2256
+total_power_w,0.106
+wns_ns,46.413
+critical_path_delay_ns,53.580
+clock_period_ns,100.0
