@@ -1,0 +1,7 @@
+Metric,Value
+design_name,fft_16_sol5_gen1
+top_module,fft_16_sol5_gen1_top
+lut_count,1598
+total_power_w,0.127
+wns_ns,-25.819
+clock_period_ns,10.0
