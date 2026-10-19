@@ -26,35 +26,40 @@ jobs:
           set -euo pipefail
           git checkout main
 
-          if ! git log main --format='%an <%ae> %cn <%ce>' | grep -Fq 'github-actions[bot]'; then
-            echo "No GitHub Actions bot identity remains in main history."
-            exit 0
-          fi
-
-          git config user.name "Pallavi Behura"
-          git config user.email "pallavibehura@gmail.com"
-
-          # Remove this one-off workflow from the final repository tree.
-          git rm .github/workflows/rewrite-contributors.yml
-          git commit -m "Remove temporary contributor cleanup workflow"
-
-          # Change only the bot's name/email; keep all existing commit dates,
-          # messages, snapshots, and the parent/merge structure.
-          git filter-branch --force --env-filter '
-            if [ "$GIT_AUTHOR_EMAIL" = "41898282+github-actions[bot]@users.noreply.github.com" ] || [ "$GIT_AUTHOR_NAME" = "github-actions[bot]" ]; then
-              export GIT_AUTHOR_NAME="Pallavi Behura"
-              export GIT_AUTHOR_EMAIL="pallavibehura@gmail.com"
-            fi
-            if [ "$GIT_COMMITTER_EMAIL" = "41898282+github-actions[bot]@users.noreply.github.com" ] || [ "$GIT_COMMITTER_NAME" = "github-actions[bot]" ]; then
-              export GIT_COMMITTER_NAME="Pallavi Behura"
-              export GIT_COMMITTER_EMAIL="pallavibehura@gmail.com"
-            fi
-          ' main
-
-          if git log main --format='%an <%ae> %cn <%ce>' | grep -Fq 'github-actions[bot]'; then
-            echo "Bot identity still appears in the rewritten branch; refusing to push."
+          git log main --format='%H %an <%ae> %cn <%ce>' > "$RUNNER_TEMP/identities.txt"
+          bot_count=$(grep -F -c 'github-actions[bot]' "$RUNNER_TEMP/identities.txt" || true)
+          echo "Bot-attributed commits found before rewrite: $bot_count"
+          if [ "$bot_count" -eq 0 ]; then
+            echo "No bot-attributed commits found in the fetched main history."
             exit 1
           fi
 
-          # Use a lease so this fails safely if main changed while rewriting.
+          git config user.name "Pallavi Behura"
+          git config user.email "pallavibehurageek@gmail.com"
+
+          # Delete the one-off workflow before the cleanup commit is rewritten.
+          git rm .github/workflows/rewrite-contributors.yml
+          git commit -m "Remove temporary contributor cleanup workflow"
+
+          # Preserve trees, messages, timestamps, and parent structure while
+          # changing only commits authored/committed by github-actions[bot].
+          git filter-branch --force --env-filter '
+            if [ "$GIT_AUTHOR_EMAIL" = "41898282+github-actions[bot]@users.noreply.github.com" ] || [ "$GIT_AUTHOR_NAME" = "github-actions[bot]" ]; then
+              export GIT_AUTHOR_NAME="Pallavi Behura"
+              export GIT_AUTHOR_EMAIL="pallavibehurageek@gmail.com"
+            fi
+            if [ "$GIT_COMMITTER_EMAIL" = "41898282+github-actions[bot]@users.noreply.github.com" ] || [ "$GIT_COMMITTER_NAME" = "github-actions[bot]" ]; then
+              export GIT_COMMITTER_NAME="Pallavi Behura"
+              export GIT_COMMITTER_EMAIL="pallavibehurageek@gmail.com"
+            fi
+          ' main
+
+          git log main --format='%H %an <%ae> %cn <%ce>' > "$RUNNER_TEMP/rewritten-identities.txt"
+          if grep -Fq 'github-actions[bot]' "$RUNNER_TEMP/rewritten-identities.txt"; then
+            echo "Bot identity still appears in the rewritten main history; refusing to push."
+            grep -F 'github-actions[bot]' "$RUNNER_TEMP/rewritten-identities.txt"
+            exit 1
+          fi
+
+          echo "Rewritten history contains no github-actions[bot] author or committer."
           git push --force-with-lease="refs/heads/main:$EXPECTED_HEAD" origin main
