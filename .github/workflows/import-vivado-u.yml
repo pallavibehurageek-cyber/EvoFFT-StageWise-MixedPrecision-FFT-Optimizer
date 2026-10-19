@@ -28,7 +28,7 @@ jobs:
           git clone --quiet https://github.com/RohanCoderiiitb/FFT-Processor-Design.git "$RUNNER_TEMP/source"
 
           source_root="$RUNNER_TEMP/source/.Xil/Vivado-28389-iiitb-OptiPlex-7080/incrSyn/775969279/u"
-          target_root=".Xil/Vivado-28389-brecw-OptiPlex-7080/incrSyn/775969279/u"
+          target_root="Vivado-28389-brecw-OptiPlex-7080/incrSyn/775969279/u"
 
           test -d "$source_root"
           if [ -e "$target_root" ]; then
